@@ -128,3 +128,10 @@ footer {
 .menu-open nav {
     transform: translateX(0);
 }
+
+img {
+    float: left;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 150px;
+}

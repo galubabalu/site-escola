@@ -15,7 +15,7 @@
 
     <?php include_once 'includes/menu.php'; ?>
     <header>
-        <p>Escola Milanês - Bem-vindo, <?php echo htmlspecialchars($_SESSION['usuario_nome']); ?>!</p>
+        <p>Escola Quintino Folhiarine Dajori - Bem-vindo, <?php echo htmlspecialchars($_SESSION['usuario_nome']); ?>!</p>
     </header>
     <main>
         <div class="content">
@@ -37,18 +37,7 @@
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.463893599249!2d-49.3027167!3d-28.7156355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9521b65d3c9e7c95%3A0x4f7a62b9d5a8e9b5!2sR.%20Santa%20Rita%20de%20C%C3%A1ssia%2C%20226%20-%20288%20-%20Pres.%20Vargas%2C%20I%C3%A7ara%20-%20SC%2C%2088820-000!5e0!3m2!1spt-BR!2sbr!4v1692727332164!5m2!1spt-BR!2sbr"
                 width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
-
             </div>
-
-            <!-- Formulário de Solicitação de Livros na Biblioteca -->
-            <h3>Solicitação de Livros na Biblioteca</h3>
-            <form method="post" action="solicitar_livro.php">
-                <div class="form-group">
-                    <label for="livro">Nome do Livro:</label>
-                    <input type="text" id="livro" name="livro" class="form-control col-sm-6" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Solicitar Livro</button>
-            </form>
 
             <!-- Formulário para Notificação de Ausência -->
             <h3>Notificar Ausência</h3>
@@ -64,20 +53,42 @@
                 <button type="submit" class="btn btn-primary">Notificar Ausência</button>
             </form>
 
-            <!-- Visualização das Matérias de Acordo com a Turma -->
-            <h3>Matérias do Ano Letivo</h3>
-            <div id="materias">
-                <!-- Esta parte deve ser preenchida dinamicamente com base no banco de dados -->
-                <p>Carregando as matérias da turma...</p>
-            </div>
-
-        </div>
-
         <footer>
-            <p>&copy; 2024 Escola Milanês. Todos os direitos reservados.</p>
+            <p>&copy; 2024 Escola Quintino Folhiarine Dajori. Todos os direitos reservados.</p>
         </footer>
     </main>
 
+    <!-- Botão Flutuante para Atualizar o Perfil -->
+    <button class="floating-button" onclick="atualizarPerfil()">Atualizar Perfil</button>
+
     <script src="scripts.js"></script>
+    <script>
+        // Função para redirecionar o usuário para a página de atualização de perfil
+        function atualizarPerfil() {
+            window.location.href = 'atualizar_perfil.php'; // Substitua pelo caminho correto da sua página de atualização de perfil
+        }
+    </script>
+
+    <style>
+        /* Estilo para o botão flutuante */
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff; /* Cor de fundo do botão */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 1000; /* Garantir que o botão fique sobre outros elementos */
+            font-size: 20px;
+        }
+
+        .floating-button:hover {
+            background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+        }
+    </style>
 </body>
 </html>

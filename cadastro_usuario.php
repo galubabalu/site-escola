@@ -6,7 +6,7 @@
 
     <?php include_once 'includes/menu.php'; ?>
     <header>
-        <p>Escola Milanês</p>
+        <p>Escola Quintino Folhiarine Dajori</header></p>
     </header>
     <main>
         <div class="content">
@@ -30,7 +30,7 @@
         </div>
     </main>
     <footer>
-        <p>&copy; 2024 Escola Milanês. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Escola Quintino Folhiarine Dajori. Todos os direitos reservados.</p>
     </footer>
 
     <script src="scripts.js"></script>
